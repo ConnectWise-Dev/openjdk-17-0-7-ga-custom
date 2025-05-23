@@ -284,7 +284,7 @@ JNIEXPORT void JNICALL
 Java_sun_lwawt_macosx_CRobot_mouseWheel
 (JNIEnv *env, jobject peer, jint wheelAmt)
 {
-    autoDelay(NO);
+    //autoDelay(NO);
     [ThreadUtilities performOnMainThreadWaiting:YES block:^(){
         CGEventSourceRef source = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);
         CGEventRef event = CGEventCreateScrollWheelEvent(source,
